@@ -1,12 +1,14 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
-
-import axios from 'axios'; //importo Axios
+import PageHeaderVue from "./components/PageHeader.vue"
+import pageMainVue from "./components/pageMain.vue"
+import pageFooter from "./components/pageFooter.vue"
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent
+		PageHeaderVue,
+		pageMainVue,
+		pageFooter
 	},
 	data() {
 		return {
@@ -31,11 +33,9 @@ export default {
 </script>
 
 <template>
-	<main>
-		<AppComponent />
-
-		<button class="btn btn-primary">Primary button</button>
-	</main>
+	<PageHeaderVue />
+	<pageMainVue />
+	<pageFooter />
 </template>
 
 <style lang="scss">
@@ -48,7 +48,4 @@ export default {
 // @use './styles/partials/variables' as *;
 
 // ...qui eventuale SCSS di App.vue
-main {
-	padding: 1rem;
-}
 </style>
