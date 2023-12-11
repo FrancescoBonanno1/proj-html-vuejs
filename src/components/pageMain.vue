@@ -17,11 +17,52 @@
                 are digged where earth's pores ought to suffice, and things have learnt to walk that ought to crawl.</p>
         </div>
     </section>
+    <section id="coursesection">
+        <div id="coursecard">
+
+        </div>
+
+
+    </section>
 </template>
 
 <style>
 #author {
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 40vh;
-}</style>
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#authorquote {
+    width: 35%;
+    height: 40%;
+}
+
+#authorquote p {
+    color: rgb(58, 58, 58);
+    font-weight: 900;
+}
+
+#authorcontainer h2 {
+    color: rgb(58, 58, 58);
+    font-weight: 900;
+}
+
+#authorcontainer {
+    width: 35%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#coursesection {
+    background-color: rgb(237, 242, 245);
+    width: 100%;
+    height: 80vh;
+}
+</style>

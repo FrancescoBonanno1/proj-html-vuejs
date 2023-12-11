@@ -17,7 +17,7 @@ export default {
     <header>
         <section id="trueheader">
             <div id="logo">
-                <img src="../assets/images (1)/MasterStudy-1.svg" alt="logo">
+                <img src="../assets/img/MasterStudy-1.svg" alt="logo">
             </div>
             <div id="menu">
                 <a v-for="link in this.store.menu" href="#link">{{ link.title }}</a>
@@ -69,6 +69,7 @@ header {
 
 #logo {
     margin-right: 15%;
+
 }
 
 #jumbotron {
