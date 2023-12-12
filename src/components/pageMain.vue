@@ -1,4 +1,16 @@
 <script>
+import { store } from '../store';
+export default {
+    components: {
+        store
+    },
+    data() {
+        return {
+            store
+        }
+    }
+
+}
 </script>
 
 <template>
@@ -23,6 +35,44 @@
         </div>
 
 
+    </section>
+    <section id="advertisement">
+        <div id="textarea">
+            <h2>Get my Exclusive Investing Book just for $19.50</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi officia beatae, velit illum fugiat, dolorum,
+                maiores ipsum neque saepe voluptate voluptatum sapiente!</p>
+            <a href="#"><img src="../assets/img/amazon.png" alt=""></a>
+
+        </div>
+        <div id="handcontainer">
+            <img src="../assets/img/book.png" alt="book">
+
+        </div>
+        <div id="smallnav">
+            <a href="#"><i class="fa-solid fa-tv"></i></a>
+            <a href="#"><i class="fa-regular fa-life-ring"></i></a>
+            <a href="#"><i class="fa-solid fa-wrench"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a>
+        </div>
+
+
+    </section>
+    <section id="whyme">
+        <h2>Why my courses?</h2>
+        <div v-for="dcard in  this.store.dynamicard " id="dynamicard">
+            <font-awesome-icon :icon="dcard.icon" />
+            <h3>{{ dcard.title }}</h3>
+            <p>{{ dcard.description }}</p>
+        </div>
+
+    </section>
+    <section id="users">
+        <div v-for="element in this.store.users" id="userscontainer">
+            <font-awesome-icon :icon="element.icon" />
+            <h2>{{ element.number }}</h2>
+            <h3>{{ element.text }}</h3>
+        </div>
     </section>
 </template>
 
@@ -64,5 +114,155 @@
     background-color: rgb(237, 242, 245);
     width: 100%;
     height: 80vh;
+}
+
+#advertisement {
+    background-image: url(../assets/img/slider_1-1917x607-1914x606.jpg);
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#textarea {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#textarea h2 {
+    color: rgb(242, 185, 30);
+    font-weight: 900;
+}
+
+#textarea p {
+    font-style: italic;
+}
+
+#handcontainer {
+    width: 40%;
+    height: 100%;
+    position: relative;
+
+}
+
+#handcontainer img {
+    width: 55%;
+    position: absolute;
+    bottom: 0%;
+    right: 35%;
+
+}
+
+#smallnav {
+    width: 3%;
+    height: 25%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0%;
+    top: 55%;
+    border: 1px solid rgb(192, 190, 190);
+    border-radius: 0.5em;
+    z-index: 9;
+}
+
+#smallnav i {
+    font-size: 1.5em;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    text-decoration: none;
+    color: rgb(126, 124, 124);
+
+}
+
+#smallnav i:hover {
+    color: darkgoldenrod;
+    transition: 5ms;
+
+}
+
+#whyme {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(237, 242, 245);
+}
+
+#whyme h2 {
+    position: absolute;
+    top: 0%;
+    left: 44%;
+    color: rgb(51, 51, 51);
+    font-weight: 900;
+}
+
+#dynamicard {
+    width: 35%;
+    border: 0.5em solid rgb(237, 242, 245);
+    border-left: 0.5em solid rgb(242, 185, 30);
+    box-shadow: 10px 10px 10px 10px rgb(173, 173, 173);
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dynamicard h3 {
+    color: rgb(51, 51, 51);
+    font-weight: 800;
+}
+
+#dynamicard p {
+    color: rgb(51, 51, 51);
+    margin-left: 1%;
+
+}
+
+#dynamicard :first-child {
+    font-size: 3em;
+    margin: 2%;
+    color: rgb(242, 185, 30);
+}
+
+#users {
+    width: 100%;
+    height: 50vh;
+    background-image: url(../assets/img/counter-1919x1101.jpg);
+    background-position-y: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#userscontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#userscontainer :first-child {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    font-size: 3em;
+
+}
+
+#userscontainer h2 {
+    color: rgb(242, 185, 30);
 }
 </style>
