@@ -69,6 +69,90 @@ export const store = reactive({
         number: Math.ceil(Math.random() * 1500),
         text: "excellent reviews"
 
+    }],
+    coursecard: [{
+        image: "src/assets/img/photo-1496307042754-b4aa456c4a2d-370x200.jpeg",
+        special: true,
+        title: "How to be a dj? Make Electronic Music",
+        type: "Electronic",
+        signal: "fa-solid fa-signal",
+        list: "fa-solid fa-list-ul",
+        clock: "fa-solid fa-clock",
+        difficulty: "Advanced",
+        dimension: "8 Lectures",
+        time: "6 Hours",
+
+
+    },
+    {
+        image: "src/assets/img/12345-1-740x400.png",
+        special: true,
+        title: "Nvidia and UE4 Technologies Practice",
+        type: "Nvidia",
+        signal: "fa-solid fa-signal",
+        list: "fa-solid fa-list-ul",
+        clock: "fa-solid fa-clock",
+        difficulty: "Advanced",
+        dimension: "8 Lectures",
+        time: "6 Hours",
+
+
+    },
+    {
+        image: "src/assets/img/photo-1491897554428-130a60dd4757-740x400.jpeg",
+        special: true,
+        title: "Fashion Photography from professional",
+        type: "Fashion",
+        signal: "fa-solid fa-signal",
+        list: "fa-solid fa-list-ul",
+        clock: "fa-solid fa-clock",
+        difficulty: "Advanced",
+        dimension: "6 Lectures",
+        time: "6 Hours",
+
+
+    },
+    {
+        image: "src/assets/img/photo-1416339134316-0e91dc9ded92-740x400.jpeg",
+        special: false,
+        title: "Design Instrument for Communications",
+        type: "Communication",
+        signal: "fa-solid fa-signal",
+        list: "fa-solid fa-list-ul",
+        clock: "fa-solid fa-clock",
+        difficulty: "Intermediate",
+        dimension: "6 Lectures",
+        time: "6 Hours",
+
+
+    },
+    {
+        image: "src/assets/img/cathryn-lavery-67852-unsplash-370x200.jpg",
+        special: false,
+        title: "Make your Concept Right and Beautiful",
+        type: "Art",
+        signal: "fa-solid fa-signal",
+        list: "fa-solid fa-list-ul",
+        clock: "fa-solid fa-clock",
+        difficulty: "Intermediate",
+        dimension: "6 Lectures",
+        time: "6 Hours",
+
+
+    },
+    {
+        image: "src/assets/img/photo-1475452779376-caebfb988090-740x400.jpeg",
+        special: false,
+        title: "Road Bike Manual or How to Be a Champion",
+        type: "Bicycling",
+        signal: "fa-solid fa-signal",
+        list: "fa-solid fa-list-ul",
+        clock: "fa-solid fa-clock",
+        difficulty: "Beginner",
+        dimension: "6 Lectures",
+        time: "6",
+
+
     }]
 
 });

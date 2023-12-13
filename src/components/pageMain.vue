@@ -30,8 +30,21 @@ export default {
         </div>
     </section>
     <section id="coursesection">
-        <div id="coursecard">
-
+        <div v-for="course in this.store.coursecard" id="coursecard">
+            <span v-if="course.special = true" id="special">SPECIAL</span>
+            <span v-else></span>
+            <img :src="course.image" alt="photo">
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.type }}</p>
+            <hr>
+            <div id="courselenght">
+                <font-awesome-icon :icon="course.signal" />
+                <span>{{ course.difficulty }}</span>
+                <font-awesome-icon :icon="course.list" />
+                <span>{{ course.dimension }}</span>
+                <font-awesome-icon :icon="course.clock" />
+                <span>{{ course.time }}</span>
+            </div>
         </div>
 
 
@@ -114,9 +127,74 @@ export default {
 }
 
 #coursesection {
-    background-color: rgb(237, 242, 245);
+    background-color: rgb(243, 243, 243);
     width: 100%;
-    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+#coursecard {
+    width: 26%;
+    height: 45%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    margin: 2%;
+    padding-bottom: 2%;
+    border: 1px solid rgb(58, 58, 58);
+}
+
+#coursecard img {
+    width: 100%;
+
+}
+
+#coursecard h3 {
+    color: rgb(58, 58, 58);
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+#coursecard p {
+    color: rgb(126, 124, 124);
+}
+
+#coursecard hr {
+    width: 22em;
+    color: rgb(51, 51, 51);
+
+}
+
+
+#special {
+    position: absolute;
+    background-color: rgb(242, 185, 30);
+    border-radius: 0.5em;
+    top: 0%;
+    right: 5%;
+    font-weight: 500;
+}
+
+#courselenght {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#courselenght :first-child {
+    color: rgb(242, 185, 30);
+}
+
+#courselenght span {
+    color: rgb(58, 58, 58);
+
 }
 
 #advertisement {
@@ -161,6 +239,7 @@ export default {
     right: 35%;
 
 }
+
 
 #smallnav {
     width: 3%;
