@@ -74,6 +74,9 @@ export default {
             <h3>{{ element.text }}</h3>
         </div>
     </section>
+    <section id="students">
+
+    </section>
 </template>
 
 <style>
@@ -264,5 +267,11 @@ export default {
 
 #userscontainer h2 {
     color: rgb(242, 185, 30);
+}
+
+#students {
+    width: 100%;
+    height: 70vh;
+    background-color: aliceblue;
 }
 </style>
