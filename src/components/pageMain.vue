@@ -31,7 +31,7 @@ export default {
     </section>
     <section id="coursesection">
         <div v-for="course in this.store.coursecard" id="coursecard">
-            <span v-if="course.special = true" id="special">SPECIAL</span>
+            <span v-if="course.special == true" id="special">SPECIAL</span>
             <span v-else></span>
             <img :src="course.image" alt="photo">
             <h3>{{ course.title }}</h3>
