@@ -88,7 +88,25 @@ export default {
         </div>
     </section>
     <section id="students">
-
+        <h2>What Students Say</h2>
+        <div id="scontainer">
+            <button><i class="fa-solid fa-arrow-left"></i></button>
+            <img v-for="image in this.store.students" :src="image.img" alt="photo">
+            <button><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div id="reviewcont">
+            <h4 v-for="messages in this.store.students">{{ messages.message }}</h4>
+        </div>
+        <div id="starscont">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <div id="pcontainer">
+            <p v-for="text in this.store.students">{{ text.p }}</p>
+        </div>
     </section>
 </template>
 
@@ -351,6 +369,66 @@ export default {
 #students {
     width: 100%;
     height: 70vh;
-    background-color: aliceblue;
+    background-color: rgb(240, 248, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#students h2 {
+    color: rgb(58, 58, 58);
+}
+
+#scontainer {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#scontainer img {
+    border-radius: 3em;
+}
+
+#scontainer img:hover {
+    width: 25%;
+    border-radius: 5em;
+    cursor: pointer;
+}
+
+#scontainer button {
+    border: 1px solid rgb(240, 248, 255);
+    background-color: rgb(240, 248, 255);
+}
+
+#reviewcont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+}
+
+#reviewcont h4 {
+    font-size: 1.5em;
+    margin-top: 2%;
+    color: rgb(58, 58, 58);
+}
+
+#starscont i {
+    color: rgb(242, 185, 30);
+}
+
+#pcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#pcontainer p {
+    color: rgb(58, 58, 58);
+    width: 80%;
 }
 </style>

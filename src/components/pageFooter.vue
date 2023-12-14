@@ -95,6 +95,10 @@
     margin-left: 5%;
 }
 
+.containerftr i:hover {
+    cursor: pointer;
+}
+
 .containerftr div {
     width: 50%;
 }
@@ -115,6 +119,10 @@
 #ftrlist ul {
     color: rgb(58, 58, 58);
     font-size: 1em;
+}
+
+#ftrlist ul:hover {
+    cursor: pointer;
 }
 
 #ftrlist li {
@@ -142,6 +150,10 @@
     width: 5em;
     height: 5em;
     margin-bottom: 4%;
+}
+
+.blogcontent img:hover {
+    cursor: pointer;
 }
 
 .blogcontent div {
